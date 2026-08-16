@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>職涯情報站｜UI/UX Designer</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Noto+Sans+TC:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#1c2b3a; --parchment:#efe4c9; --deep:#16232f; --gold:#c8952a; --coral:#d95f3b; --line: rgba(28,43,58,0.18); }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background: radial-gradient(1200px 600px at 20% -10%, #24384c 0%, var(--deep) 55%, #101b25 100%);
+    color:#e8dfc4; font-family:'Noto Sans TC', sans-serif; padding: 34px 16px 70px;
+  }
+  .wrap{max-width:640px;margin:0 auto;}
+  .eyebrow{ font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin:0 0 6px; }
+  h1{ font-family:'Fraunces', serif; font-weight:700; font-size: clamp(24px,4vw,32px); margin:0 0 8px; }
+
+  .card{
+    background: var(--parchment); color: var(--ink); border-radius:14px;
+    padding:28px 26px; margin-bottom:22px; box-shadow: 0 20px 44px rgba(0,0,0,0.32);
+  }
+  .tag{ font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--coral); letter-spacing:.08em; text-transform:uppercase; margin-bottom:6px; display:block; }
+  .jobtitle{ font-family:'Fraunces', serif; font-size:26px; font-weight:700; margin:0 0 4px; }
+  .jobsub{ font-size:13px; color:#5c6b78; margin-bottom:18px; }
+
+  .rows{ display:flex; flex-direction:column; gap:14px; }
+  .row{ display:grid; grid-template-columns: 96px 1fr; gap:14px; }
+  .row .k{ font-size:12.5px; font-weight:700; color:#5c6b78; font-family:'IBM Plex Mono', monospace; }
+  .row .v{ font-size:14px; line-height:1.75; }
+
+  .video-card{
+    background: var(--deep); border-radius:14px; padding:20px;
+    box-shadow: 0 20px 44px rgba(0,0,0,0.32);
+  }
+  .video-card .eyebrow{ margin-bottom:10px; }
+  .video-frame{
+    position:relative; width:100%; padding-top:56.25%;
+    background:#0c141c; border-radius:10px; overflow:hidden;
+  }
+  .video-frame iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
+  .video-frame video{ position:absolute; inset:0; width:100%; height:100%; object-fit:contain; background:#000; }
+  .note{ margin-top:18px; font-size:12.5px; color:#5c6b78; line-height:1.7; border-top:1px dashed var(--line); padding-top:14px; }
+  @media (max-width:480px){ .row{ grid-template-columns: 1fr; gap:4px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">生涯冒險地圖．職業岔路情報站</p>
+  <h1>職涯情報站</h1>
+
+  <div class="card">
+    <span class="tag">職業標籤 01</span>
+    <div class="jobtitle">UI/UX Designer</div>
+    <div class="jobsub">使用者體驗設計師</div>
+    <div class="rows">
+      <div class="row"><div class="k">工作內容</div><div class="v">研究使用者的需求與習慣，設計手機App或網站的畫面，讓大家用起來更順手、更好懂。</div></div>
+      <div class="row"><div class="k">所需能力</div><div class="v">觀察力、同理心、圖像／設計軟體操作、與人溝通討論。</div></div>
+      <div class="row"><div class="k">RIASEC組合</div><div class="v">以 A（藝術型）為主，同時常涉及 I（研究型）與 S（社會型）。</div></div>
+      <div class="row"><div class="k">相關學群</div><div class="v">設計學群、資訊工程學群、心理學群。</div></div>
+      <div class="row"><div class="k">工作環境</div><div class="v">多在辦公室，用電腦工作，常需與工程師、行銷團隊一起開會討論。</div></div>
+    </div>
+    <div class="note">本頁資訊為教學簡化版本，僅供國一學生初步認識職業樣貌之用，非正式職涯測驗或職業適配診斷結果。</div>
+  </div>
+
+  <div class="video-card">
+    <p class="eyebrow">職涯短片</p>
+    <div class="video-frame" id="frame">
+      <video
+        src="career-video.mp4"
+        title="職涯影片"
+        controls
+        playsinline>
+        您的瀏覽器不支援影片播放，請更新瀏覽器版本。
+      </video>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
